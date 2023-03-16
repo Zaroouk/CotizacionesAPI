@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Cotizaciones.Models;
-using Microsoft.EntityFrameworkCore.SqlServer;
+
 
 namespace Cotizaciones.Data{
 

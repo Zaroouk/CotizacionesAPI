@@ -25,8 +25,6 @@ public class CotizacionOfertaController : ControllerBase
 
         _mapper = new Mapper(new MapperConfiguration(cfg =>
         {
-            // cfg.CreateMap<UserToAddDto, User>();
-            // cfg.CreateMap<CotizacionTotalToAddDto, CotizacionTotal>();
             cfg.CreateMap<CotizacionOfertaToAddDto, CotizacionOferta>();
         }));
         _editHelper = new EditExcel(config);

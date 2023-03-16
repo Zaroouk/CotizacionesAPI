@@ -1,6 +1,4 @@
 using Cotizaciones.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 namespace Cotizaciones.Data
 {
     public class UserRepository : IUserRepository
@@ -34,11 +32,6 @@ namespace Cotizaciones.Data
             IEnumerable<User> users = _entityFramework.Users.ToList<User>();
             return users;
         }
-        // public Auth GetAuths()
-        // {
-        //     IEnumerable<Auth> auths = _entityFramework.Auth.ToList<Auth>();
-        //     return auths;
-        // }
         public User GetSingleUser(int userId)
         {
             User? user = _entityFramework.Users?
@@ -53,7 +46,6 @@ namespace Cotizaciones.Data
 
         public User GetExistingUser(string email)
         {
-            // User? user = _entityFramework.Users.FirstOrDefault(u => u.Email == email);
             User? user = _entityFramework.Users.Where(x => x.Email == email).FirstOrDefault();
             return user;
         }

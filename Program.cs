@@ -1,6 +1,5 @@
 using Cotizaciones.Data;
 using System.Text;
-// using Cotizaciones.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -71,19 +70,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuer = false,
             ValidateAudience = false
         };
-        // options.Events = new JwtBearerEvents
-        // {
-        //     OnAuthenticationFailed = context =>
-        //     {
-        //         Console.WriteLine($"Authentication failed: {context.Exception}");
-        //         return Task.CompletedTask;
-        //     },
-        //     OnTokenValidated = context =>
-        //     {
-        //         Console.WriteLine($"Token validated: {context.SecurityToken}");
-        //         return Task.CompletedTask;
-        //     }
-        // };
     });
 
 var app = builder.Build();
