@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'CotizacionAPI'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8696E79A6E374CA0A518BAA28CDAC9A3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_699E104EAD534ADEBB2605A255B9A790 }}
           package: .
