@@ -45,7 +45,7 @@ builder.Services.AddCors((options)=>{
     });
     options.AddPolicy("ProdCors",(corsBuilder)=>
     {
-        corsBuilder.WithOrigins("https://mengy.io","https://menja.dev")
+        corsBuilder.WithOrigins("https://mengy.io","https://menja.dev","http://mengy.io","http://menja.dev")
             .AllowAnyMethod()
             .AllowAnyHeader()
             .AllowCredentials();
